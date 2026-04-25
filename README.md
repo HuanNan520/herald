@@ -72,7 +72,7 @@ and can even dispatch follow-up tasks back into those sessions.
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/herald
+git clone https://github.com/HuanNan520/herald.git
 cd herald
 
 # 1. configure
