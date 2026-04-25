@@ -59,6 +59,32 @@ and can even dispatch follow-up tasks back into those sessions.
   `selfcheck.sh` is idempotent and safe to cron, with auto-repair paths for common
   issues (tmux missing, log bloat, processed backlog).
 
+## Where this fits in 2026
+
+Built before [Claude Code Channels](https://code.claude.com/docs/en/channels)
+shipped (March 20, 2026). Different shape of problem.
+
+|                                   | Channels | claude-code-telegram | Claude Squad | **herald** |
+|-----------------------------------|:--------:|:--------------------:|:------------:|:----------:|
+| Telegram ↔ Claude                 |    ✓    |          ✓          |       —      |     ✓     |
+| Multi-session aggregation         |   1:1   |         1:1          |       —      |   **N:1**  |
+| Persona-voiced summary            |    —    |          —           |       —      |   **✓**   |
+| Persona dispatches sub-tasks      |    —    |          —           |       —      |   **✓**   |
+| Adaptive debounce / quiet hours   |    —    |          —           |       —      |   **✓**   |
+| Multi-agent orchestration         |    —    |          —           |      ✓      |      —     |
+| Official Anthropic support        |    ✓    |          —           |       —      |      —     |
+
+**If you have one Claude Code session** and want a phone-side terminal,
+use Channels. That's the official path now and it's well supported.
+
+**If you have many concurrent Claude Code windows** running across different
+projects and want them aggregated through a voice you own — with the AI
+deciding when to surface and when to stay quiet — that's what this does.
+
+The design predates Channels and is built on Claude Code's `Stop` / `SubagentStop` /
+`Notification` hooks plus `claude -p` subprocesses, not MCP. Tradeoffs noted under
+[Status & caveats](#status--caveats).
+
 ## Requirements
 
 - [Claude Code CLI](https://claude.com/claude-code) installed and logged in
