@@ -1,0 +1,31 @@
+# secrets + local config
+.env
+persona.txt
+projects.json
+settings.json
+
+# runtime state
+inbox/
+pending/
+processed/
+state.json
+history.json
+daemon.log
+daemon.err
+daemon.pid
+flush.trigger
+archive_*.tar.gz
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

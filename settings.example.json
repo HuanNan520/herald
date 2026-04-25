@@ -1,0 +1,38 @@
+{
+  "_comment": "Merge the 'hooks' block into your ~/.claude/settings.json. The hook path must be absolute — change it to wherever you cloned this repo.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /absolute/path/to/herald/hooks/notify-telegram.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /absolute/path/to/herald/hooks/notify-telegram.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /absolute/path/to/herald/hooks/notify-telegram.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

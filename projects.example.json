@@ -1,0 +1,16 @@
+{
+  "_comment": "Where to look for projects when you send '@name: task' or when the persona emits [[RUN:name|cmd]]. Resolution order: exact directory name → alias → substring fuzzy match.",
+
+  "search_paths": [
+    "~",
+    "~/projects",
+    "~/code"
+  ],
+
+  "aliases": {
+    "blog":   "my-blog-repo",
+    "web":    "my-blog-repo",
+    "game":   "my-godot-game",
+    "self":   "herald"
+  }
+}
