@@ -155,8 +155,10 @@ All config is via env vars (`.env` file is sourced by `scripts/start.sh`):
 | `/help` | Print command list |
 | `@project: task` | Dispatch `claude -p` into the named project |
 
-Natural-language detection is registered for the common ones, e.g. "blank my
-screen" / "关掉屏幕" both map to `/off`.
+Natural-language detection is registered for the common ones, e.g. "blank the
+screen" or "turn off the monitor" both map to `/off`. The matcher ships with
+bilingual keywords (English + Simplified Chinese) out of the box; extend
+`detect_intent()` for your own locale.
 
 ## Persona customisation
 
